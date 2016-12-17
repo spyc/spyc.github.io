@@ -1,0 +1,340 @@
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+html, body, :root {
+    font-family: "Roboto", "Noto Sans CJK TC Regular", "Source Han Sans TWHK", "Microsoft JhengHei", sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+a {
+    text-decoration: none;
+    color: #00897B;
+}
+
+.material-icons {
+    text-rendering: optimizeLegibility;
+    font-feature-settings: 'liga';
+}
+
+#panel {
+    width: 100%;
+    height: 40%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #0C4024;
+    color: #E8F21D;
+    z-index: 1;
+}
+
+#panel > h1 {
+    margin-left: 10%;
+    margin-top: 5%;
+    font-size: 4em;
+}
+
+#card {
+    z-index: 2;
+    background-color: #ffffff;
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-top: 17% !important;
+    max-width: 1280px;
+    width: 90%;
+    min-height: 20px;
+    -webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2),
+    0px 2px 2px 0px rgba(0, 0, 0, 0.14),
+    0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2),
+    0px 2px 2px 0px rgba(0, 0, 0, 0.14),
+    0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2),
+                0px 2px 2px 0px rgba(0, 0, 0, 0.14),
+                0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+}
+
+@media only screen and (max-width: 600px) {
+    #card {
+        margin-top: 50% !important;
+    }
+
+    #panel > h1 {
+        text-align: center;
+        margin-left: auto;
+    }
+}
+
+#card h2 {
+    margin-left: 20px;
+    font-size: 3em;
+    color: #00695C;
+}
+
+#list {
+    margin: 0.5rem 1em 1rem 1em;
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+}
+
+.link {
+    display: block;
+    transition: .25s;
+    color: #00897B;
+    background-color: #fff;
+    line-height: 1.5rem;
+    padding: 10px 20px;
+    margin: 0;
+    border-bottom: 1px solid #e0e0e0;
+    cursor: pointer;
+}
+
+.link:hover {
+    background-color: #ddd;
+}
+
+.link:last-child {
+    border-bottom: none;
+}
+
+#footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#progress {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 5px;
+    padding: 0;
+    margin: 8px;
+    margin-left: 0 !important;
+}
+
+#bar {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 5px;
+    -webkit-transform: translate(0, 0) scale(1, 1);
+    transform: translate(0, 0) scale(1, 1);
+    background-color: #acece6;
+}
+
+.bar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 5px;
+    -webkit-transition: -webkit-transform .2s linear;
+    transition: -webkit-transform .2s linear;
+    transition: transform .2s linear;
+    transition: transform .2s linear, -webkit-transform .2s linear;
+    background-color: #26a69a;
+}
+
+#bar-1 {
+    -webkit-animation: md-progress-linear-indeterminate-scale-1 4s infinite,
+    md-progress-linear-indeterminate-1 4s infinite;
+    animation: md-progress-linear-indeterminate-scale-1 4s infinite,
+    md-progress-linear-indeterminate-1 4s infinite;
+}
+
+#bar-2 {
+    -webkit-animation: md-progress-linear-indeterminate-scale-2 4s infinite,
+    md-progress-linear-indeterminate-2 4s infinite;
+    animation: md-progress-linear-indeterminate-scale-2 4s infinite,
+    md-progress-linear-indeterminate-2 4s infinite;
+}
+
+@-webkit-keyframes md-progress-linear-indeterminate-scale-1 {
+    0% {
+        -webkit-transform: scaleX(0.1);
+        transform: scaleX(0.1);
+        -webkit-animation-timing-function: linear;
+        animation-timing-function: linear;
+    }
+    36.6% {
+        -webkit-transform: scaleX(0.1);
+        transform: scaleX(0.1);
+        -webkit-animation-timing-function: cubic-bezier(0.33473, 0.12482, 0.78584, 1);
+        animation-timing-function: cubic-bezier(0.33473, 0.12482, 0.78584, 1);
+    }
+    69.15% {
+        -webkit-transform: scaleX(0.83);
+        transform: scaleX(0.83);
+        -webkit-animation-timing-function: cubic-bezier(0.22573, 0, 0.23365, 1.37098);
+        animation-timing-function: cubic-bezier(0.22573, 0, 0.23365, 1.37098);
+    }
+    100% {
+        -webkit-transform: scaleX(0.1);
+        transform: scaleX(0.1);
+    }
+}
+
+@keyframes md-progress-linear-indeterminate-scale-1 {
+    0% {
+        -webkit-transform: scaleX(0.1);
+        transform: scaleX(0.1);
+        -webkit-animation-timing-function: linear;
+        animation-timing-function: linear;
+    }
+    36.6% {
+        -webkit-transform: scaleX(0.1);
+        transform: scaleX(0.1);
+        -webkit-animation-timing-function: cubic-bezier(0.33473, 0.12482, 0.78584, 1);
+        animation-timing-function: cubic-bezier(0.33473, 0.12482, 0.78584, 1);
+    }
+    69.15% {
+        -webkit-transform: scaleX(0.83);
+        transform: scaleX(0.83);
+        -webkit-animation-timing-function: cubic-bezier(0.22573, 0, 0.23365, 1.37098);
+        animation-timing-function: cubic-bezier(0.22573, 0, 0.23365, 1.37098);
+    }
+    100% {
+        -webkit-transform: scaleX(0.1);
+        transform: scaleX(0.1);
+    }
+}
+
+@-webkit-keyframes md-progress-linear-indeterminate-1 {
+    0% {
+        left: -105.16667%;
+        -webkit-animation-timing-function: linear;
+        animation-timing-function: linear;
+    }
+    20% {
+        left: -105.16667%;
+        -webkit-animation-timing-function: cubic-bezier(0.5, 0, 0.70173, 0.49582);
+        animation-timing-function: cubic-bezier(0.5, 0, 0.70173, 0.49582);
+    }
+    69.15% {
+        left: 21.5%;
+        -webkit-animation-timing-function: cubic-bezier(0.30244, 0.38135, 0.55, 0.95635);
+        animation-timing-function: cubic-bezier(0.30244, 0.38135, 0.55, 0.95635);
+    }
+    100% {
+        left: 95.44444%;
+    }
+}
+
+@keyframes md-progress-linear-indeterminate-1 {
+    0% {
+        left: -105.16667%;
+        -webkit-animation-timing-function: linear;
+        animation-timing-function: linear;
+    }
+    20% {
+        left: -105.16667%;
+        -webkit-animation-timing-function: cubic-bezier(0.5, 0, 0.70173, 0.49582);
+        animation-timing-function: cubic-bezier(0.5, 0, 0.70173, 0.49582);
+    }
+    69.15% {
+        left: 21.5%;
+        -webkit-animation-timing-function: cubic-bezier(0.30244, 0.38135, 0.55, 0.95635);
+        animation-timing-function: cubic-bezier(0.30244, 0.38135, 0.55, 0.95635);
+    }
+    100% {
+        left: 95.44444%;
+    }
+}
+@-webkit-keyframes md-progress-linear-indeterminate-scale-2 {
+    0% {
+        -webkit-transform: scaleX(0.1);
+        transform: scaleX(0.1);
+        -webkit-animation-timing-function: cubic-bezier(0.20503, 0.05705, 0.57661, 0.45397);
+        animation-timing-function: cubic-bezier(0.20503, 0.05705, 0.57661, 0.45397); }
+    19.15% {
+        -webkit-transform: scaleX(0.57);
+        transform: scaleX(0.57);
+        -webkit-animation-timing-function: cubic-bezier(0.15231, 0.19643, 0.64837, 1.00432);
+        animation-timing-function: cubic-bezier(0.15231, 0.19643, 0.64837, 1.00432);
+    }
+    44.15% {
+        -webkit-transform: scaleX(0.91);
+        transform: scaleX(0.91);
+        -webkit-animation-timing-function: cubic-bezier(0.25776, -0.00316, 0.21176, 1.38179);
+        animation-timing-function: cubic-bezier(0.25776, -0.00316, 0.21176, 1.38179);
+    }
+    100% {
+        -webkit-transform: scaleX(0.1);
+        transform: scaleX(0.1);
+    }
+}
+
+@keyframes md-progress-linear-indeterminate-scale-2 {
+    0% {
+        -webkit-transform: scaleX(0.1);
+        transform: scaleX(0.1);
+        -webkit-animation-timing-function: cubic-bezier(0.20503, 0.05705, 0.57661, 0.45397);
+        animation-timing-function: cubic-bezier(0.20503, 0.05705, 0.57661, 0.45397);
+    }
+    19.15% {
+        -webkit-transform: scaleX(0.57);
+        transform: scaleX(0.57);
+        -webkit-animation-timing-function: cubic-bezier(0.15231, 0.19643, 0.64837, 1.00432);
+        animation-timing-function: cubic-bezier(0.15231, 0.19643, 0.64837, 1.00432);
+    }
+    44.15% {
+        -webkit-transform: scaleX(0.91);
+        transform: scaleX(0.91);
+        -webkit-animation-timing-function: cubic-bezier(0.25776, -0.00316, 0.21176, 1.38179);
+        animation-timing-function: cubic-bezier(0.25776, -0.00316, 0.21176, 1.38179);
+    }
+    100% {
+        -webkit-transform: scaleX(0.1);
+        transform: scaleX(0.1);
+    }
+}
+@-webkit-keyframes md-progress-linear-indeterminate-2 {
+    0% {
+        left: -54.88889%;
+        -webkit-animation-timing-function: cubic-bezier(0.15, 0, 0.51506, 0.40968);
+        animation-timing-function: cubic-bezier(0.15, 0, 0.51506, 0.40968);
+    }
+    25% {
+        left: -17.25%;
+        -webkit-animation-timing-function: cubic-bezier(0.31033, 0.28406, 0.8, 0.73372);
+        animation-timing-function: cubic-bezier(0.31033, 0.28406, 0.8, 0.73372);
+    }
+    48.35% {
+        left: 29.5%;
+        -webkit-animation-timing-function: cubic-bezier(0.4, 0.62703, 0.6, 0.90203);
+        animation-timing-function: cubic-bezier(0.4, 0.62703, 0.6, 0.90203);
+    }
+    100% {
+        left: 117.38889%;
+    }
+}
+
+@keyframes md-progress-linear-indeterminate-2 {
+    0% {
+        left: -54.88889%;
+        -webkit-animation-timing-function: cubic-bezier(0.15, 0, 0.51506, 0.40968);
+        animation-timing-function: cubic-bezier(0.15, 0, 0.51506, 0.40968);
+    }
+    25% {
+        left: -17.25%;
+        -webkit-animation-timing-function: cubic-bezier(0.31033, 0.28406, 0.8, 0.73372);
+        animation-timing-function: cubic-bezier(0.31033, 0.28406, 0.8, 0.73372);
+    }
+    48.35% {
+        left: 29.5%;
+        -webkit-animation-timing-function: cubic-bezier(0.4, 0.62703, 0.6, 0.90203);
+        animation-timing-function: cubic-bezier(0.4, 0.62703, 0.6, 0.90203);
+    }
+    100% {
+        left: 117.38889%;
+    }
+}
