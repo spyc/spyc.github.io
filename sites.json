@@ -2,5 +2,9 @@
   {
     "name": "library",
     "description": "SPYC Library"
+  },
+  {
+    "name": "docs",
+    "description": "SPYC Document"
   }
 ]
