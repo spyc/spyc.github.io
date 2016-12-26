@@ -25,7 +25,7 @@ a {
     top: 0;
     left: 0;
     right: 0;
-    background-color: #0C4024;
+    background-color: #388e3c;
     color: #E8F21D;
     z-index: 1;
 }
@@ -73,7 +73,7 @@ a {
 #card h2 {
     margin-left: 20px;
     font-size: 3em;
-    color: #00695C;
+    color: #388e3c;
 }
 
 #list {
@@ -87,7 +87,7 @@ a {
 .link {
     display: block;
     transition: .25s;
-    color: #00897B;
+    color: #388e3c;
     background-color: #fff;
     line-height: 1.5rem;
     padding: 10px 20px;
