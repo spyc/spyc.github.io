@@ -10,7 +10,7 @@ html, body, :root {
 
 a {
     text-decoration: none;
-    color: #00897B;
+    color: #388e3c;
 }
 
 .material-icons {
@@ -26,7 +26,7 @@ a {
     left: 0;
     right: 0;
     background-color: #388e3c;
-    color: #E8F21D;
+    color: #eeeeee;
     z-index: 1;
 }
 
